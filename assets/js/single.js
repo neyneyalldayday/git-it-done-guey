@@ -22,7 +22,7 @@ var getRepoIssues = function(repo) {
    
 };
 
-getRepoIssues('expressjs/express');
+getRepoIssues('angular/angular');
 
 
 
@@ -62,8 +62,10 @@ var displayWarning = function(repo) {
     limitWarningEl.textContent = "To see more than 30 issues, visit ";
 
     var linkEl = document.createElement("a")
+    linkEl.textContent = "See more issues on github.com"
     linkEl.setAttribute("href", "https://github.com/" + repo + "/issues");
     linkEl.setAttribute("target", "_blank");
 
     limitWarningEl.appendChild(linkEl)
+   
 }
